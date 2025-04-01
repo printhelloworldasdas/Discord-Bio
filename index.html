@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Bio - [Username]</title>
+    <title>Discord Bio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,38 +11,30 @@
     <div class="video-background">
         <video autoplay muted loop id="bgVideo">
             <source src="assets/background.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
         </video>
     </div>
     
-    <!-- Audio Player -->
-    <audio loop id="bgMusic">
-        <source src="assets/music.mp3" type="audio/mpeg">
-    </audio>
-    
-    <!-- Main Content -->
-    <div class="content">
-        <div class="profile">
-            <img src="[Discord Avatar URL]" alt="Profile Picture" class="avatar">
-            <h1>[Username]</h1>
-            <p class="tag">#[Discord Tag]</p>
-            
-            <div class="bio">
-                [Custom bio text here]
-            </div>
-            
-            <div class="social-links">
-                <!-- Social media/Discord buttons -->
-            </div>
-            
-            <!-- Audio/Video Controls -->
-            <div class="media-controls">
-                <button id="videoToggle">Toggle Video</button>
-                <button id="musicToggle">Toggle Music</button>
-                <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
-            </div>
-        </div>
+    <!-- Welcome Screen (Click to enter) -->
+    <div class="welcome-screen" id="welcomeScreen">
+        <h1>Click to edit your bio</h1>
+        <p>This text will disappear and show your profile</p>
     </div>
     
+    <!-- Bio Content (Hidden by default) -->
+    <div class="bio-content" id="bioContent">
+        <img src="assets/default-pfp.jpg" alt="Profile Picture" class="avatar" id="profilePicture">
+        <h1 class="username" id="username">Your Name</h1>
+        <p class="description" id="description">This is where your description will appear. You can edit this text to say whatever you want about yourself.</p>
+        
+        <div class="social-links">
+            <div class="social-icon">D</div>
+            <div class="social-icon">T</div>
+            <div class="social-icon">I</div>
+            <div class="social-icon">Y</div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
