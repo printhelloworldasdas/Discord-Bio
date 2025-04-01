@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Bio - [Username]</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop id="bgVideo">
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <!-- Audio Player -->
+    <audio loop id="bgMusic">
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Main Content -->
+    <div class="content">
+        <div class="profile">
+            <img src="[Discord Avatar URL]" alt="Profile Picture" class="avatar">
+            <h1>[Username]</h1>
+            <p class="tag">#[Discord Tag]</p>
+            
+            <div class="bio">
+                [Custom bio text here]
+            </div>
+            
+            <div class="social-links">
+                <!-- Social media/Discord buttons -->
+            </div>
+            
+            <!-- Audio/Video Controls -->
+            <div class="media-controls">
+                <button id="videoToggle">Toggle Video</button>
+                <button id="musicToggle">Toggle Music</button>
+                <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
