@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server/app.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server/app.js"
+    },
+    {
+      "src": "/admin/(.*)",
+      "dest": "server/app.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "public/$1"
+    }
+  ],
+  "env": {
+    "MONGODB_URI": "@mongodb_uri",
+    "SESSION_SECRET": "@session_secret",
+    "ADMIN_USERNAME": "@admin_username",
+    "ADMIN_PASSWORD": "@admin_password",
+    "NODE_ENV": "production"
+  }
+}
